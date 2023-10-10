@@ -1,0 +1,79 @@
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    /* uses flex to maintain vertical and horizontal centering of master container */
+    display: flex;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    justify-content: center;
+    /* must specify height for vertical centering to work */
+    height: 100vh;
+}
+#master{
+    /* fix dimensions of master */
+    width: 700px;
+    height:600px;
+    background-color: rgb(203, 203, 204);
+    /* add drop shadow */
+    filter: drop-shadow(5px 5px 10px gray);
+}
+#days-container{
+    /* use flex to arrange days as a row */
+    display:flex;
+}
+.day{
+    /* constrain dimensions of each day to match overall width and height */
+    width:100px;
+    height:100px;
+}
+.button:hover{
+    /* changes day colour on rollover */
+    background-color: aqua;
+}
+.button:active{
+    /* changes day color on selection */
+    background-color: rgb(123, 123, 223);
+}
+h4{
+    /* style all h4 text elements */
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0c0c0c;
+    /* center text horizontally */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+#city-text{
+    /* match the line height to font size for better control of positioning */
+    font-size: 40px;
+    line-height: 40px;
+    /* position the city text using specific offset values */
+    position: absolute;
+    left:10px;
+    bottom:10px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.531);
+}
+#hero-container{
+    /* the parent of an absolutely positioned element must be relative */
+    position: relative;
+    width: 700px;
+    height: 500px;
+}
+#hero-image{
+    /* prevent the image from distorting when scaling */
+    object-fit: cover;
+    width:700px;
+    height: 500px;
+}
+.weather-icon{
+    width: 40px;
+    height: 40px;
+    /* these 3 lines of code centre the icon horizontally - alternative technique to flex */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
